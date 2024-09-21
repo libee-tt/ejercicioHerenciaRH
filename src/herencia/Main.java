@@ -9,13 +9,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		/////Vendedores
+		/////crear Vendedores
 		SalesRep jim = new SalesRep("Jim", "Halpert", 101, 35, 250, 7, 55000, 8, 150000);
         SalesRep dwight = new SalesRep("Dwight", "Schrute", 102, 40, 300, 10, 60000, 15, 200000);
         SalesRep pam = new SalesRep("Pam", "Beesly", 103, 32, 200, 5, 45000, 6, 100000);
         SalesRep stanley = new SalesRep("Stanley", "Hudson", 104, 55, 400, 20, 65000, 30, 180000);
         SalesRep phyllis = new SalesRep("Phyllis", "Vance", 105, 50, 350, 15, 58000, 20, 170000);
 
+        ///crear Manager 
+        SalesManager michael = new SalesManager("Michael", "Scott", 100, 45, 500, 25, 70000, 25, 300000);
+        
         /////agregar vendedores a una lista
         ArrayList<SalesRep> salesReps = new ArrayList <>();
         salesReps.add(jim);
@@ -23,6 +26,14 @@ public class Main {
         salesReps.add(pam);
         salesReps.add(phyllis);
         salesReps.add(stanley);
+        
+        ///agregar vendedores al team
+        michael.addSalesRepToTeam(jim);
+        michael.addSalesRepToTeam(dwight);
+        michael.addSalesRepToTeam(pam);
+        michael.addSalesRepToTeam(stanley);
+        michael.addSalesRepToTeam(phyllis);
+        
 		
 		///////imprimir info de salesReps
         for (SalesRep rep:salesReps) {
@@ -37,8 +48,6 @@ public class Main {
         }//for 
         
 
-        ///Manager 
-        SalesManager michael = new SalesManager("Michael", "Scott", 100, 45, 500, 25, 70000, 25, 300000);
         
         //imprimir info manager
         System.out.println("SalesManager: "+michael.getFirstName()+" "+michael.getLastName());

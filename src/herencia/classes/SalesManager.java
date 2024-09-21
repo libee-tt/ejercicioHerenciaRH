@@ -12,9 +12,15 @@ public class SalesManager extends SalesRep{
 			int vacationDaysTaken, double salary, int yearsWorked, double salesMade) {
 		super(firstName, lastName, registration, age, daysWorked, vacationDaysTaken, salary, yearsWorked, salesMade);
 		
-		this.team = team; //////prueba-team
+		this.team = new ArrayList<>(); //////prueba-team
 	}//SalesManager
 
+// crear team
+	public void addSalesRepToTeam(SalesRep rep) {
+		team.add(rep);
+	}//addSalesRepToTeam
+	
+	
 //	métodos 
 	public double calculateCommission() {
         double salesTeam = 0; 
