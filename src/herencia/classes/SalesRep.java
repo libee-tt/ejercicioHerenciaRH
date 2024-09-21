@@ -26,6 +26,22 @@ public class SalesRep extends Employee {
 	public void setSalesMade(double salesMade) {
 		this.salesMade = salesMade;
 	}
+
+
+//añadiendo método to string 
+	@Override
+	public String toString() {
+		return 
+				"Sales Rep : "+ getFirstName()+" "+getLastName()+
+				"\n Sales Made: $"+ getSalesMade()+
+				"\n Time to Retirement: "+ timeToRetirement()+
+				"\n Vacation Time Left: "+vacationTimeLeft()+
+				"\n Bonus: "+ calculateBonus()+
+				"\n Commission: $"+calculateCommission();
+	} //toString
+	
+	
+	
 	 
 	 
 

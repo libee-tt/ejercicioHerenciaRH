@@ -31,8 +31,19 @@ public class SalesManager extends SalesRep{
         
         return 0.03 * salesTeam;
     } //calculateCommission
-	
 
+	@Override
+	public String toString() {
+		return 
+				"Sales Manager : "+ getFirstName()+" "+getLastName()+
+				"\n Time to Retirement: "+ timeToRetirement()+
+				"\n Vacation Time Left: "+vacationTimeLeft()+
+				"\n Bonus: "+ calculateBonus()+
+				"\n Commission for sales made - team: $"+calculateCommission();
+	}//toString
+	
+//toString 
+	
 
 }//class SalesManager
 

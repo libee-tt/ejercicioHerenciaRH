@@ -38,23 +38,14 @@ public class Main {
 		///////imprimir info de salesReps
         for (SalesRep rep:salesReps) {
         	
-        	System.out.println("Sales Rep: "+rep.getFirstName()+" "+rep.getLastName());
-        	System.out.println("Time to Retirement: " + rep.timeToRetirement());
-        	System.out.println("Vacation Time Left: " + rep.vacationTimeLeft());
-        	System.out.println("Bonus: " + rep.calculateBonus());
-        	System.out.println("Commission: " + rep.calculateCommission());
+        	System.out.println(rep.toString());
         	System.out.println("___________________________________________________");
         	
         }//for 
         
-
         
         //imprimir info manager
-        System.out.println("SalesManager: "+michael.getFirstName()+" "+michael.getLastName());
-    	System.out.println("Time to Retirement: " + michael.timeToRetirement());
-    	System.out.println("Vacation Time Left: " + michael.vacationTimeLeft());
-    	System.out.println("Bonus: " + michael.calculateBonus());
-    	System.out.println("Commission: " + michael.calculateCommission());
+        System.out.println(michael.toString());
     	System.out.println("___________________________________________________");
         
         
