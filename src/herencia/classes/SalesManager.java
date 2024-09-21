@@ -1,9 +1,32 @@
 package herencia.classes;
 
-public class SalesManager {
+import java.util.ArrayList;
+
+public class SalesManager extends SalesRep{
 	
-	public void calculateComission(){
-	      // 0.03 * all sales made by team
-	   }//calculateComission
+	//equipo ventas
+	private ArrayList<SalesRep>team;
+
+	
+	public SalesManager(String firstName, String lastName, int registration, int age, int daysWorked,
+			int vacationDaysTaken, double salary, int yearsWorked, double salesMade) {
+		super(firstName, lastName, registration, age, daysWorked, vacationDaysTaken, salary, yearsWorked, salesMade);
+		
+		this.team = team; //////prueba-team
+	}//SalesManager
+
+//	métodos 
+	public double calculateCommission() {
+        double salesTeam = 0; 
+        
+        for (SalesRep rep : team) {
+        	salesTeam += rep.getSalesMade();
+        }//for 
+        
+        return 0.03 * salesTeam;
+    } //calculateCommission
+	
+
 
 }//class SalesManager
+

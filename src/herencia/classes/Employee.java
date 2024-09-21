@@ -25,24 +25,58 @@ public class Employee {
 		this.salary = salary;
 		this.yearsWorked = yearsWorked;
 		///////////
-		int timeToRetirement();
-		int vacationTimeLeft();
 		
 	} //constructor Employee
     
-//Metodos    
+//Métodos    
     public int timeToRetirement(){
         // time to retirement = min(60 - age, 40 - yearsWorked)
-    	return ;
+    	return Math.min((60-age),(40-yearsWorked));
      }//timeToRetirement
 
      public int vacationTimeLeft(){
          // vacation time left = (daysWorked/360)*(30 - vacationDaysTaken)
+    	 return (daysWorked/30)*(30-vacationDaysTaken);
      }//vacationTimeLeft
 
-     public int calculateBonus(){
+     public double calculateBonus(){
          // bonus = 2.2*salary
+    	 return (2.2*salary);
      }//calculateBonus
 
+//Getters and Setters
+	public String getFirstName() {
+		return firstName;
+	} //getFirstName
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}//setFirstName
+
+	public String getLastName() {
+		return lastName;
+	}//getLastName
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}//setLastName
+
+	public int getAge() {
+		return age;
+	}//getAge
+
+	public void setAge(int age) {
+		this.age = age;
+	}//setAge
+
+	public double getSalary() {
+		return salary;
+	}//getSalary
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}//setSalary
+
+     
 
 } //class Employee
