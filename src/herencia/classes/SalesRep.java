@@ -33,11 +33,11 @@ public class SalesRep extends Employee {
 	public String toString() {
 		return 
 				"Sales Rep : "+ getFirstName()+" "+getLastName()+
-				"\n Sales Made: $"+ getSalesMade()+
+				"\n Sales Made: $"+ String.format("%.0f",  getSalesMade())+
 				"\n Time to Retirement: "+ timeToRetirement()+
 				"\n Vacation Time Left: "+vacationTimeLeft()+
-				"\n Bonus: "+ calculateBonus()+
-				"\n Commission: $"+calculateCommission();
+				"\n Bonus: "+ String.format("%.0f",calculateBonus())+
+				"\n Commission: $"+String.format("%.0f",calculateCommission());
 	} //toString
 	
 	

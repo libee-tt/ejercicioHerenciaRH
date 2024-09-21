@@ -38,7 +38,7 @@ public class SalesManager extends SalesRep{
 				"Sales Manager : "+ getFirstName()+" "+getLastName()+
 				"\n Time to Retirement: "+ timeToRetirement()+
 				"\n Vacation Time Left: "+vacationTimeLeft()+
-				"\n Bonus: "+ calculateBonus()+
+				"\n Bonus: "+ String.format("\"%.0f",calculateBonus())+
 				"\n Commission for sales made - team: $"+calculateCommission();
 	}//toString
 	
