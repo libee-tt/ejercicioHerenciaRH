@@ -1,6 +1,5 @@
 package herencia;
 
-import java.util.ArrayList;
 
 import herencia.classes.SalesManager;
 import herencia.classes.SalesRep;
@@ -20,13 +19,6 @@ public class Main {
         ///crear Manager 
         SalesManager michael = new SalesManager("Michael", "Scott", 100, 49, 500, 25, 70000, 25, 300000);
         
-        /////agregar vendedores a una lista
-        ArrayList<SalesRep> salesReps = new ArrayList <>();
-        salesReps.add(jim);
-        salesReps.add(dwight);
-        salesReps.add(pam);
-        salesReps.add(phyllis);
-        salesReps.add(stanley);
         
         ///agregar vendedores al team
         michael.addSalesRepToTeam(jim);
@@ -37,16 +29,15 @@ public class Main {
         
 		
 		///////imprimir info de salesReps
-        for (SalesRep rep:salesReps) {
-        	
-        	System.out.println(rep.toString());
+        for (SalesRep salesRep:michael.getTeam().values()) {
+        	System.out.println(salesRep);
         	System.out.println("___________________________________________________");
         	
         }//for 
         
         
         //imprimir info manager
-        System.out.println(michael.toString());
+        System.out.println(michael);
     	System.out.println("___________________________________________________");
         
         

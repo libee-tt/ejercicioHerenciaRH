@@ -1,31 +1,40 @@
 package herencia.classes;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class SalesManager extends SalesRep{
 	
 	//equipo ventas
-	private ArrayList<SalesRep>team;
+	private HashMap<Integer, SalesRep>team;
 
 	
 	public SalesManager(String firstName, String lastName, int registration, int age, int daysWorked,
 			int vacationDaysTaken, double salary, int yearsWorked, double salesMade) {
 		super(firstName, lastName, registration, age, daysWorked, vacationDaysTaken, salary, yearsWorked, salesMade);
 		
-		this.team = new ArrayList<>(); //////prueba-team
+		this.team = new HashMap<>(); //////prueba-team
 	}//SalesManager
 
 // crear team
-	public void addSalesRepToTeam(SalesRep rep) {
-		team.add(rep);
+	public void addSalesRepToTeam(SalesRep salesRep) {
+		team.put(salesRep.getRegistration(), salesRep);
 	}//addSalesRepToTeam
 	
-	
-//	métodos 
+//	getter para el team
+		
+	public HashMap<Integer, SalesRep> getTeam() {
+		return team;
+	}//getTeam
+
+	public void setTeam(HashMap<Integer, SalesRep> team) {
+		this.team = team;
+	}
+
+	//	métodos 
 	public double calculateCommission() {
         double salesTeam = 0; 
         
-        for (SalesRep rep : team) {
+        for (SalesRep rep : team.values()) {
         	salesTeam += rep.getSalesMade();
         }//for 
         
@@ -35,11 +44,11 @@ public class SalesManager extends SalesRep{
 	@Override
 	public String toString() {
 		return 
-				"Sales Manager : "+ getFirstName()+" "+getLastName()+
-				"\n Time to Retirement: "+ timeToRetirement()+
-				"\n Vacation Time Left: "+vacationTimeLeft()+
-				"\n Bonus: "+ String.format("\"%.0f",calculateBonus())+
-				"\n Commission for sales made - team: $"+calculateCommission();
+				"Sales Manager: "+ getFirstName()+" "+getLastName()+
+				"\nTime to Retirement: "+ timeToRetirement()+
+				"\nVacation Time Left: "+vacationTimeLeft()+
+				"\nBonus: "+ String.format("\"%.0f",calculateBonus())+
+				"\nCommission for sales made - team: $"+calculateCommission();
 	}//toString
 	
 //toString 

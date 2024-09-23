@@ -77,6 +77,15 @@ public class Employee {
 		this.salary = salary;
 	}//setSalary
 
+	public int getRegistration() {
+		return registration;
+	}//getRegistration
+
+	public void setRegistration(int registration) {
+		this.registration = registration;
+	}//getRegistration
+	
+
      
 
 } //class Employee

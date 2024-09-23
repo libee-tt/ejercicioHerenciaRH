@@ -32,13 +32,14 @@ public class SalesRep extends Employee {
 	@Override
 	public String toString() {
 		return 
-				"Sales Rep : "+ getFirstName()+" "+getLastName()+
-				"\n Sales Made: $"+ String.format("%.0f",  getSalesMade())+
-				"\n Time to Retirement: "+ timeToRetirement()+
-				"\n Vacation Time Left: "+vacationTimeLeft()+
-				"\n Bonus: "+ String.format("%.0f",calculateBonus())+
-				"\n Commission: $"+String.format("%.0f",calculateCommission());
+				"Sales Rep: "+ getFirstName()+" "+getLastName()+
+				"\nSales Made: $"+ String.format("%.0f",  getSalesMade())+
+				"\nTime to Retirement: "+ timeToRetirement()+
+				"\nVacation Time Left: "+vacationTimeLeft()+
+				"\nBonus: "+ String.format("%.0f",calculateBonus())+
+				"\nCommission: $"+String.format("%.0f",calculateCommission());
 	} //toString
+
 	
 	
 	
